@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&display=swap");
+:root {
+  --modal-duration: 1s;
+  --primary-color: #30336b;
+  --secondary-color: #be2edd;
+  --text-primary-color: #fff;
+  --text-secondart-color: #ccc7c7;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+}
+
+body #root-container nav {
+  background-color: var(--primary-color);
+  border-right: 2px solid rgba(200, 200, 200, 0.1);
+  color: var(--text-primary-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  z-index: 99;
+}
+
+body #root-container nav .logo {
+  padding: 30px 0;
+  text-align: center;
+}
+
+body #root-container nav img {
+  height: 125px;
+  width: 125px;
+  border-radius: 50%;
+}
+
+body #root-container nav ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+body #root-container nav ul li {
+  border-bottom: 2px solid rgba(200, 200, 200, 0.1);
+  padding: 20px;
+}
+
+body #root-container nav ul li a {
+  color: var(--text-primary-color);
+  text-decoration: none;
+}
+
+body #root-container nav ul li a:hover {
+  text-decoration: underline;
+}
+
+body #root-container nav ul li:first-of-type {
+  border-top: 2px solid rgba(200, 200, 200, 0.1);
+}
+
+body #root-container header {
+  background-color: var(--primary-color);
+  color: var(--text-primary-color);
+  font-size: 130%;
+  position: relative;
+  padding: 40px 15px;
+  text-align: center;
+}
+
+body #root-container header h1 {
+  margin: 0;
+}
+
+body #root-container header p {
+  margin: 30px 0;
+}
+
+body #root-container button,
+body #root-container input[type='submit'] {
+  background-color: var(--secondary-color);
+  border: 0;
+  border-radius: 5px;
+  color: var(--text-primary-color);
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+body #root-container button:focus {
+  outline: none;
+}
+/*# sourceMappingURL=style.css.map */
