@@ -15,8 +15,9 @@
 body {
   font-family: 'Lato', sans-serif;
   margin: 0;
+  transition: transform 0.3s ease;
 
-  #root-container {
+  .root-container {
     nav {
       background-color: var(--primary-color);
       border-right: 2px solid rgba(200, 200, 200, 0.1);
@@ -27,8 +28,8 @@ body {
       width: 200px;
       height: 100vh;
       z-index: 99;
+      transform: translateX(-100%);
 
-      // transform: translateX(-100%);
       .logo {
         padding: 30px 0;
         text-align: center;
@@ -84,7 +85,7 @@ body {
 
     }
 
-    button,
+    header button,
     input[type='submit'] {
       background-color: var(--secondary-color);
       border: 0;
@@ -97,5 +98,105 @@ body {
     button:focus {
       outline: none;
     }
+
+    .toggle {
+      background-color: rgba(0, 0, 0, 0.3);
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    .cta-btn {
+      padding: 12px 30px;
+      font-size: 20px;
+    }
+
+    main.container {
+      padding: 15px;
+      margin: 0 auto;
+      max-width: 100%;
+      width: 800px;
+    }
+
+    .modal-container {
+      background-color: rgba(0, 0, 0, 0.6);
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      .modal {
+        background-color: #FFF;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        position: absolute;
+        overflow: hidden;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 100%;
+        width: 400px;
+        animation-name: modalopen;
+        animation-duration: var(--modal-duration);
+
+        .modal-header {
+          background-color: var(--primary-color);
+          color: #FFF;
+          padding: 15px;
+
+          h3 {
+            margin: 0;
+          }
+        }
+
+        .modal-content {
+          padding: 20px;
+
+          .sign-up-form {
+            margin: 15px 0;
+
+            label {
+              display: block;
+              margin-bottom: 5px;
+            }
+
+            .form-input {
+              padding: 8px;
+              width: 100%;
+            }
+          }
+        }
+
+        .close-btn {
+          background: transparent;
+          font-size: 25px;
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          color: #FFF;
+        }
+      }
+    }
+
+    .modal-container.show-modal {
+      display: block;
+    }
+
+    @keyframes modalopen {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
   }
+
+}
+
+body.show-nav {
+  transform: translateX(200px);
 }

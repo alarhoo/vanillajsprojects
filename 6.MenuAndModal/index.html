@@ -15,7 +15,7 @@
     <title>Menu Slider and Modal</title>
   </head>
   <body>
-    <div id="root-container">
+    <div class="root-container">
       <nav>
         <div class="logo">
           <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="User" />
@@ -28,14 +28,14 @@
         </ul>
       </nav>
       <header>
-        <button id="toggle" class="toggle" title="toggle">
+        <button type="button" id="toggle" class="toggle" title="toggle">
           <i class="fa fa-bars fa-2x"></i>
         </button>
         <h1>My Landing Page</h1>
         <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h4>
         <button type="button" title="Sign Up" class="cta-btn" id="open">Sign Up</button>
       </header>
-      <main>
+      <main class="container">
         <h2>What is this landing page about?</h2>
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia officiis amet minus nobis accusamus modi
@@ -64,38 +64,46 @@
           <li>I really can't think</li>
         </ul>
       </main>
-    </div>
-    <!-- Modal -->
-    <div class="modal-container" id="modal">
-      <div class="modal">
-        <button class="closed-btn" id="closed" title="close button">
-          <i class="fa fa-times"></i>
-        </button>
-        <div class="modal-header">
-          <h3>Sign Up</h3>
-        </div>
-        <div class="modal-content">
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, sint.</p>
-          <form action="" class="sign-up-form">
-            <div>
-              <label for="name">Name</label>
-              <input type="text" name="name" id="name" placeholder="Enter Name" />
-            </div>
-            <div>
-              <label for="email">Email</label>
-              <input type="email" name="email" id="email" placeholder="Enter Email" />
-            </div>
-            <div>
-              <label for="password">Password</label>
-              <input type="password" name="password" id="password" placeholder="Enter Password" />
-            </div>
-            <div>
-              <label for="password">Confirm Password</label>
-              <input type="password" name="password" id="password2" placeholder="Enter Confirm Password" />
-            </div>
-          </form>
+      <!-- Modal -->
+      <div class="modal-container" id="modal">
+        <div class="modal">
+          <button class="close-btn" id="closed" title="close button" type="button">
+            <i class="fa fa-times"></i>
+          </button>
+          <div class="modal-header">
+            <h3>Sign Up</h3>
+          </div>
+          <div class="modal-content">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, sint.</p>
+            <form action="" class="sign-up-form">
+              <div>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="Enter Name" class="form-input" />
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Enter Email" class="form-input" />
+              </div>
+              <div>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter Password" class="form-input" />
+              </div>
+              <div>
+                <label for="password">Confirm Password</label>
+                <input
+                  type="password"
+                  name="password"
+                  id="password2"
+                  placeholder="Enter Confirm Password"
+                  class="form-input"
+                />
+              </div>
+              <button type="submit" title="submit">Submit</button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
